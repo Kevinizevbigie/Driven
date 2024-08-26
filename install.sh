@@ -46,3 +46,8 @@ PRESPROJECTFILE=$PRESROOT/$app.Api.csproj
 
 # Run Script
 . $SCRIPTROOT/setup/5.reference-packages.sh
+
+TESTFOLDER=$PROJECTROOT/test
+
+
+. $SCRIPTROOT/setup/6.test-setup.sh

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-TESTFOLDER=$PROJECTROOT/test
 cd $TESTFOLDER
 
 # Create test project
@@ -32,10 +31,10 @@ cd $app.Domain.UnitTests
 dotnet add $app.Api.UnitTests.csproj reference ../../src/$app.Application/$app.Application.csproj
 dotnet add $app.Api.UnitTests.csproj reference ../../src/$app.Api/$app.Api.csproj
 
-dotnet new xunit $app.Domain.FunctionalTests
-dotnet new xunit $app.Application.FunctionalTests
-dotnet new xunit $app.Infrastructure.FunctionalTests
-dotnet new xunit $app.Api.FunctionalTests
+# dotnet new xunit $app.Domain.FunctionalTests
+# dotnet new xunit $app.Application.FunctionalTests
+# dotnet new xunit $app.Infrastructure.FunctionalTests
+# dotnet new xunit $app.Api.FunctionalTests
 
 
 
