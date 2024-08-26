@@ -38,7 +38,11 @@ rm $DOMAINROOT/*.cs $APPROOT/*.cs $INFRAROOT/*.cs
 # Run Script
 . $SCRIPTROOT/setup/4.copy-generic.sh
 
-exit
+# Project file variables
+DOMAINPROJECTFILE=$DOMAINROOT/$app.Domain.csproj
+APPLICATIONPROJECTFILE=$APPROOT/$app.Application.csproj
+INFRASTRUCTUREPROJECTFILE=$INFRAROOT/$app.Infrastructure.csproj
+PRESPROJECTFILE=$PRESROOT/$app.Api.csproj
 
 # Run Script
 . $SCRIPTROOT/setup/5.reference-packages.sh

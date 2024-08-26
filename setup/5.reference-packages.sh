@@ -3,16 +3,13 @@
 ## Nuget Packages for Domain
 ## ==========================
 
-DOMAINPROJECTFILE=$DOMAINROOT/$app.Domain.csproj
 cd $DOMAINROOT
-
 dotnet add package MediatR.Contracts
 
 ## ==========================
 ## Nuget Packages & references for Application
 ## ==========================
 
-APPLICATIONPROJECTFILE=$APPROOT/$app.Application.csproj
 cd $APPROOT
 
 dotnet add package Dapper
@@ -27,8 +24,8 @@ dotnet add $APPLICATIONPROJECTFILE reference $DOMAINPROJECTFILE
 ## Nuget Packages & references for Infrastructure
 ## ==========================
 
-INFRASTRUCTUREPROJECTFILE=$INFRAROOT/$app.Infrastructure.csproj
 cd $INFRAROOT
+
 dotnet add package EFCore.NamingConventions
 dotnet add package Microsoft.Extensions.Configuration.Abstractions
 dotnet add package Microsoft.Extensions.DependencyInjection
@@ -40,8 +37,6 @@ dotnet add $INFRASTRUCTUREPROJECTFILE reference $APPLICATIONPROJECTFILE
 ## ==========================
 ## Nuget Packages & references for Presentation
 ## ==========================
-
-PRESPROJECTFILE=$PRESROOT/$app.Api.csproj
 
 cd $PRESROOT
 dotnet add package MediatR
