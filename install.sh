@@ -17,12 +17,21 @@ else
 fi
 
 
-## Source modules
-
 . $SCRIPTROOT/setup/1.make-solution.sh
 
-exit
 . $SCRIPTROOT/setup/2.create-projects.sh
+
+# create layer paths
+DOMAINROOT=$PROJECTROOT/src/$app.Domain
+APPROOT=$PROJECTROOT/src/$app.Application
+INFRAROOT=$PROJECTROOT/src/$app.Infrastructure
+PRESROOT=$PROJECTROOT/src/$app.Api
+
+# remove default class from classlib dirs
+rm $DOMAINROOT/*.cs $APPROOT/*.cs $INFRAROOT/*.cs
+
 . $SCRIPTROOT/setup/3.update-solution.sh
+
+exit
 . $SCRIPTROOT/setup/4.copy-generic.sh
 . $SCRIPTROOT/setup/5.reference-packages.sh
