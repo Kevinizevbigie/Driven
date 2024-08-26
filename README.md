@@ -17,8 +17,9 @@ cd Driven
 
 ### Usage
 
-`chmod +x install.sh`
-`./install.sh`
+First, make it executable `chmod +x install.sh`.
+
+Then, run the script `./install.sh`
 
 Once you run the script, you need to supply the project name. And that's it.
 
