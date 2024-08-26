@@ -7,9 +7,11 @@
 
 ### Install
 
+```
 cd
 git clone https://github.com/Kevinizevbigie/Driven.git
 cd Driven
+```
 
 ---
 
