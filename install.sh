@@ -17,8 +17,10 @@ else
 fi
 
 
+# Run Script
 . $SCRIPTROOT/setup/1.make-solution.sh
 
+# Run Script
 . $SCRIPTROOT/setup/2.create-projects.sh
 
 # create layer paths
@@ -30,8 +32,12 @@ PRESROOT=$PROJECTROOT/src/$app.Api
 # remove default class from classlib dirs
 rm $DOMAINROOT/*.cs $APPROOT/*.cs $INFRAROOT/*.cs
 
+# Run Script
 . $SCRIPTROOT/setup/3.update-solution.sh
 
 exit
+# Run Script
 . $SCRIPTROOT/setup/4.copy-generic.sh
+
+# Run Script
 . $SCRIPTROOT/setup/5.reference-packages.sh
