@@ -35,9 +35,10 @@ rm $DOMAINROOT/*.cs $APPROOT/*.cs $INFRAROOT/*.cs
 # Run Script
 . $SCRIPTROOT/setup/3.update-solution.sh
 
-exit
 # Run Script
 . $SCRIPTROOT/setup/4.copy-generic.sh
+
+exit
 
 # Run Script
 . $SCRIPTROOT/setup/5.reference-packages.sh

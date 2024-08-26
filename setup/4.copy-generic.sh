@@ -1,5 +1,4 @@
 
-OVERVIEWPROJECT=/home/vinn/projects/DotNet/hello-sharp
 ## Copy .gitignore and .editorconfig
-cp $OVERVIEWPROJECT/.gitignore $PROJECTROOT
-cp $OVERVIEWPROJECT/.editorconfig $PROJECTROOT
+cp $SCRIPTROOT/defaults/.gitignore $PROJECTROOT
+cp $SCRIPTROOT/defaults/.editorconfig $PROJECTROOT
