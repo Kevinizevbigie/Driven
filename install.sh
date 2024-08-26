@@ -6,7 +6,7 @@ read -p "What is the name of the applicaton? " app
 PROJECTROOT=~/projects/DotNet/$app
 
 # This script
-SCRIPTROOT="$( dirname -- "${BASH_SOURCE[0]}" )"/setup
+SCRIPTROOT="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 if [ ! -d $PROJECTROOT ]; then
     mkdir -p $PROJECTROOT/src
@@ -19,10 +19,10 @@ fi
 
 ## Source modules
 
-. $SCRIPTROOT/1.make-solution.sh
+. $SCRIPTROOT/setup/1.make-solution.sh
 
 exit
-. $SCRIPTROOT/2.create-projects.sh
-. $SCRIPTROOT/3.update-solution.sh
-. $SCRIPTROOT/4.copy-generic.sh
-. $SCRIPTROOT/5.reference-packages.sh
+. $SCRIPTROOT/setup/2.create-projects.sh
+. $SCRIPTROOT/setup/3.update-solution.sh
+. $SCRIPTROOT/setup/4.copy-generic.sh
+. $SCRIPTROOT/setup/5.reference-packages.sh
