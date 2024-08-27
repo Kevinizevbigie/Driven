@@ -25,6 +25,6 @@ Once you run the script, you need to supply the project name. And that's it.
 
 ### Note
 
-- This script is for linux.
+- This script is for linux (Tested on Debian 12).
 - dotnet cli is required.
 
